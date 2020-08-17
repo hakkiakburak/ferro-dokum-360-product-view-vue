@@ -4,11 +4,12 @@
       <div class="row">
         <div class="col-12 mb-4 card p-0">
           <vue-three-sixty
-            :amount="36"
-            imagePath="https://scaleflex.cloudimg.io/crop/1920x700/n/https://scaleflex.airstore.io/demo/360-car"
-            fileName="iris-{index}.jpeg"
+            :amount="35"
+            imagePath="https://raw.githubusercontent.com/hakkiakburak/ferro-360-photos/master"
+            fileName="ferro{index}.jpg"
             spinReverse
             autoplay
+            paddingIndex
             buttonClass="dark"
           >
             <template v-slot:header>
@@ -71,7 +72,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 #app {
   background-color: #ffffff;
   margin: 50px;

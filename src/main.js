@@ -1,13 +1,15 @@
-import Vue from "vue";
-import App from "./App.vue";
-import "./registerServiceWorker";
-import router from "./router";
-import store from "./store";
+import Vue from 'vue'
+import App from './App.vue'
+import './registerServiceWorker'
+import './styles/app.css'
+import { VueHammer } from 'vue2-hammer'
+import VueThreeSixty from './components/I360Viewer.vue'
 
-Vue.config.productionTip = false;
+Vue.use(VueHammer)
+Vue.component('vue-three-sixty', VueThreeSixty)
+
+Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount("#app");
+  render: (h) => h(App)
+}).$mount('#app')
